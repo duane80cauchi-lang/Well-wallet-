@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="joke-card">
+            <h1>😂 Joke Generator</h1>
+            
+            <div class="joke-display" id="jokeDisplay">
+                <p class="loading">Click the button to get a joke...</p>
+            </div>
+
+            <div class="joke-type-selector">
+                <label for="jokeType">Joke Type:</label>
+                <select id="jokeType">
+                    <option value="any">Any</option>
+                    <option value="general">General</option>
+                    <option value="knock-knock">Knock-Knock</option>
+                    <option value="programming">Programming</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button id="getJokeBtn" class="btn btn-primary">Get Joke</button>
+                <button id="copyBtn" class="btn btn-secondary" disabled>Copy Joke</button>
+                <button id="shareBtn" class="btn btn-secondary" disabled>Share</button>
+            </div>
+
+            <div class="joke-history">
+                <h3>Recent Jokes</h3>
+                <ul id="historyList" class="history-list">
+                    <li class="empty-history">No jokes yet. Generate one to start!</li>
+                </ul>
+                <button id="clearHistoryBtn" class="btn btn-small" style="display: none;">Clear History</button>
+            </div>
+
+            <div class="joke-stats">
+                <div class="stat">
+                    <span class="stat-label">Jokes Generated:</span>
+                    <span class="stat-value" id="jokeCount">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Current Type:</span>
+                    <span class="stat-value" id="currentType">Any</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>ℹ️ How It Works</h3>
+            <p>This joke generator uses the <strong>JokeAPI</strong> to fetch random jokes. Select a category and click "Get Joke" to generate a new joke!</p>
+            <ul>
+                <li><strong>Any:</strong> Random jokes from all categories</li>
+                <li><strong>General:</strong> Safe for all audiences</li>
+                <li><strong>Knock-Knock:</strong> Classic knock-knock jokes</li>
+                <li><strong>Programming:</strong> Tech and programming jokes</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
